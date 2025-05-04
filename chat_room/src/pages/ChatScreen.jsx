@@ -19,7 +19,7 @@ const ChatScreen = ({ username, room, socket, setSocket, user_name}) => {
     socket.onclose = () => {
       console.log("WebSocket disconnected, attempting to reconnect...");
       setTimeout(() => {
-        const newSocket = new WebSocket(`ws://localhost:8000/ws/${room}?user_name=${user_name}`);
+        const newSocket = new WebSocket(`${process.env.REACT_APP_WS_URL}/${room}?user_name=${user_name}`);
         setSocket(newSocket);
       }, 1000); // Reconnect after 1 second
     };

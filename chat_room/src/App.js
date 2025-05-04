@@ -27,7 +27,7 @@ function App() {
   };
 
   const handleRoomSubmit = (roomName) => {
-    const socket = new WebSocket(`ws://localhost:8000/ws/${roomName}?user_name=${user}`);
+    const socket = new WebSocket(`${process.env.REACT_APP_WS_URL}/${roomName}?user_name=${user}`);
     setStep("chat");
     setRoom(roomName)
     setSocket(socket);
