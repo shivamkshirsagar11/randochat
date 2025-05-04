@@ -25,3 +25,4 @@ yarn-error.log*
 # chache
 
 __pycache__
+env

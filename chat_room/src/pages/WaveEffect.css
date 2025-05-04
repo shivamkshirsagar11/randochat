@@ -1,0 +1,24 @@
+.wave-animation {
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 20%, transparent 70%);
+    animation: waveMove 1s ease-out infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  button:hover .wave-animation {
+    opacity: 1;
+  }
+  
+  @keyframes waveMove {
+    0% {
+      transform: translateX(-100%) scaleY(1);
+    }
+    50% {
+      transform: translateX(0%) scaleY(1.2);
+    }
+    100% {
+      transform: translateX(100%) scaleY(1);
+    }
+  }
+  
